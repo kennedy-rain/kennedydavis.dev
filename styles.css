@@ -1,0 +1,226 @@
+body {
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    color: #302C34;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+h1, h2, p, button {
+    margin-left: 10vw;
+}
+
+
+.purple-button {
+    border: none;
+    border-radius: 20px;
+    color:#f4f4f4;
+    cursor: pointer;
+    background-color: #640D66;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.purple-button:after {
+  background-color: #EA79A2;
+  border-radius: 20px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.purple-button:hover:after {
+  transform: translate(0, 0);
+}
+
+.purple-button:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.purple-button:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .purple-button {
+    padding: 0 40px;
+  }
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+    border-bottom: 3px solid #EA79A2;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #302C34;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    background: #640D66;
+    padding: 10%;
+    margin-top: -0px;
+}
+
+h3 {
+    color:#f4f4f4;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 200;
+    background-color: #640D66;
+    margin-top: -50px;
+}
+
+.project img {
+    max-width: 200px;
+    margin: 0 auto;
+    height: auto;
+}
+.project {
+    display: flex;
+    padding: 5rem;
+    width: 10vw;
+    height: 40vh;
+    border-radius: 10%;
+    background-color: #f4f4f4;
+    margin: 0 auto;
+}
+
+.project:hover {
+    border:#EA79A2 3px solid;
+}
+.project a {
+    text-decoration: none;
+    color: #640D66;
+    text-align: center;
+}
+
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Cool Waves for Homepage */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -mz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+svg path {
+  animation: pathAnim 7s linear infinite;
+}
+
+svg path:nth-child(2) {
+  animation-delay: 1s;
+}
+svg path:nth-child(3) {
+  animation-delay: 3s;
+}
+svg path:nth-child(4) {
+  animation-play-state: paused;
+}
+
+@keyframes pathAnim {
+  0% {
+    d: path(
+      "M0, 192 C220, 100, 440, 100, 660, 192 C880, 290, 1100, 290, 1320, 192 L1320 500 L0 500"
+    );
+  }
+  25% {
+    d: path(
+      "M0, 100 C220, 100, 440, 292, 660, 292 C880, 292, 1100, 100, 1320, 102 L1320 500 L0 500"
+    );
+  }
+  50% {
+    d: path(
+      "M0, 192 C220, 290, 440, 290, 660, 192 C880, 100, 1100, 100, 1320, 192 L1320 500 L0 500"
+    );
+  }
+  75% {
+    d: path(
+      "M0, 292 C220, 292, 440, 100, 660, 100 C880, 100, 1100, 292, 1320, 192 L1320 500 L0 500"
+    );
+  }
+  100% {
+    d: path(
+      "M0, 192 C220, 100, 440, 100, 660, 192 C880, 290, 1100, 290, 1320, 192 L1320 500 L0 500"
+    );
+  }
+}
