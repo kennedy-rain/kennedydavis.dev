@@ -90,48 +90,73 @@ nav ul li a {
     color: #302C34;
 }
 
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    background: #640D66;
-    padding: 10%;
-    margin-top: -0px;
+h3 {
+  color:#f4f4f4;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 4em;
+  font-weight: 200;
+  background-color: #640D66;
+  margin-top: -50px;
 }
 
-h3 {
-    color:#f4f4f4;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    font-size: 4em;
-    font-weight: 200;
-    background-color: #640D66;
-    margin-top: -50px;
+.projects {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #640D66;
+  padding-bottom: 500px;
+}
+
+.project {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 300px;
+  height: 400px;
+  flex: 1 1 calc(33.333% - 40px);
+  margin: 10px;
+  background-color:#f4f4f4;
+}
+
+.project a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .project img {
-    max-width: 200px;
-    margin: 0 auto;
-    height: auto;
-}
-.project {
-    display: flex;
-    padding: 5rem;
-    width: 10vw;
-    height: 40vh;
-    border-radius: 10%;
-    background-color: #f4f4f4;
-    margin: 0 auto;
+  width: 100%;
+  height: auto;
 }
 
+.project h4, .project p, .project button {
+  margin: 10px 0;
+}
+
+.project h4 {
+  font-size: 1.5em;
+  font-weight: 500;
+  color:#640D66;
+}
+.project p {
+  font-size: 0.75em;
+  padding: 12px 40px;
+}
+
+.project button {
+  margin: 0 auto;
+}
 .project:hover {
-    border:#EA79A2 3px solid;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border:#EA79A2 3px solid;
 }
-.project a {
-    text-decoration: none;
-    color: #640D66;
-    text-align: center;
-}
+
 
 
 .slideshow-container {
@@ -224,3 +249,4 @@ svg path:nth-child(4) {
     );
   }
 }
+
