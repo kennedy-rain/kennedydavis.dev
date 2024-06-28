@@ -15,24 +15,6 @@ h1, h2, p, button {
     margin-left: 10vw;
 }
 
-h1 {
-  color:#EA79A2;
-  font-size: 3em;
-  padding: 0 10px;
-}
-
-h2 {
-  font-weight: 200;
-  font-size: 4em;
-  color:#640D66;
-  margin: 0;
-  margin-left: 10vw;
-}
-p {
-  max-width: 50%;
-  line-height: 20px;
-  color: #656565;
-}
 
 .purple-button {
     border: none;
@@ -50,14 +32,13 @@ p {
   justify-content: center;
   line-height: 24px;
   max-width: 100%;
-  padding: 10px 25px;
+  padding: 0 25px;
   position: relative;
   text-align: center;
   text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin-top: 25px;
 }
 
 .purple-button:after {
@@ -80,7 +61,8 @@ p {
 }
 
 .purple-button:active {
-  background-color: #ffdeda;
+  background-color: #f4f4f4;
+  color:#640D66;
   outline: 0;
 }
 
@@ -268,6 +250,4 @@ svg path:nth-child(4) {
     );
   }
 }
-
-
 
