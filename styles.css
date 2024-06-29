@@ -1,8 +1,14 @@
+html {
+  height: 100%;
+}
+
+
 body {
     font-family: "Manrope", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color:#302C34;
 }
 
 header {
@@ -13,32 +19,55 @@ header {
 
 h1, h2, p, button {
     margin-left: 10vw;
+    margin-right: 10vw;
 }
 
+.intro {
+  margin: 50px 0;
+}
 
+.intro h1 {
+  background: rgb(215,85,132);
+  background: linear-gradient(144deg, rgba(215,85,132,1) 0%, rgba(100,13,102,1) 100%);
+  background-clip: text;
+  color: transparent;
+  font-size: 5em;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.intro h2 {
+  font-size: 2.5em;
+  font-weight: 200;
+}
+
+.intro p {
+  line-height: 30px;
+  max-width: 70vw;
+}
 .purple-button {
     border: none;
     border-radius: 20px;
     color:#f4f4f4;
     cursor: pointer;
     background-color: #640D66;
-  align-items: center;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: flex;
-  font-family: Inter,sans-serif;
-  font-size: 16px;
-  height: 48px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
-  padding: 0 25px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 .purple-button:after {
@@ -61,7 +90,8 @@ h1, h2, p, button {
 }
 
 .purple-button:active {
-  background-color: #ffdeda;
+  background-color: #f4f4f4;
+  color:#640D66;
   outline: 0;
 }
 
@@ -99,6 +129,7 @@ h3 {
   font-weight: 200;
   background-color: #640D66;
   margin-top: -50px;
+  padding-bottom: 50px;
 }
 
 .projects {
@@ -112,12 +143,13 @@ h3 {
 
 .project {
   border: 1px solid #ccc;
-  border-radius: 20px;
+  border-radius: 30px;
   overflow: hidden;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   max-width: 300px;
+  min-width: 250px;
   height: 400px;
   flex: 1 1 calc(33.333% - 40px);
   margin: 10px;
@@ -141,6 +173,7 @@ h3 {
 .project h4 {
   font-size: 1.5em;
   font-weight: 500;
+  margin: 20px 20px 0 20px;
   color:#640D66;
 }
 .project p {
@@ -157,7 +190,66 @@ h3 {
   border:#EA79A2 3px solid;
 }
 
+.learn-more-wrap {
+  background-color:#640D66;
+  color:#f4f4f4;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  max-width: 100px;
+  max-height: 20px;
+  margin: 0 auto;
+  z-index: 1;
+}
 
+.learn-more {
+  background-color:#640D66;
+  color: #f4f4f4;
+  border: none;
+  padding: 20px;
+  border-radius: 20px;
+}
+.project:hover .learn-more {
+  background-color:#EA79A2;
+  border-radius: 30px;
+  z-index: -1;
+}
+
+.learn-more {
+  border-radius: 30px;
+  background-color: #640D66;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  padding: 16px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.learn-more:after {
+  content: '➜';
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.project:hover .learn-more{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+.project:hover .learn-more:after {
+  opacity: 1;
+  right: 10px;
+}
 
 .slideshow-container {
     position: relative;
@@ -249,4 +341,6 @@ svg path:nth-child(4) {
     );
   }
 }
+
+
 
