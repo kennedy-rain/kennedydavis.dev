@@ -290,35 +290,18 @@ h3 {
 }
 
 /* About Me Page */
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
 header {
   text-align: center;
   padding: 20px 0;
 }
 
-.profile-pic {
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  border: 3px solid #EA79A2;
+#about-me-image {
+  max-width: 500px;
+  height: auto;
+}
+
+.about-me-container {
+  background-color: #fff;
 }
 
 .bio {
@@ -332,14 +315,18 @@ header {
   max-width: 600px;
   margin-top: 20px;
 }
-
 .skills {
-  margin-top: 40px;
+  margin: 40px;
 }
 
+.skills h2 {
+  margin: 0;
+  width: 200px;
+  text-align: center;
+}
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: 1fr;
   gap: 10px;
   margin-top: 20px;
 }
@@ -348,7 +335,8 @@ header {
   background: #ffe6f7;
   padding: 15px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 20px;
+  width: 200px;
   transition: transform 0.3s ease;
 }
 
