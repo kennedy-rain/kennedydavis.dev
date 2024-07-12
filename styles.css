@@ -69,6 +69,7 @@ h1, h2, p, button {
 .intro h2 {
   font-size: 2.5em;
   font-weight: 200;
+  width:80vw;
 }
 
 .intro h1, .intro h2 {
