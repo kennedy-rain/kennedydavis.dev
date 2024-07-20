@@ -37,16 +37,6 @@ h1, h2, p, button {
   margin-right: 10vw;
 }
 
-/* Example CSS for lazy-loaded elements */
-.lazy-load {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.lazy-load.visible {
-  opacity: 1;
-}
-
 
 .intro {
   margin: 50px 0;
@@ -156,13 +146,13 @@ nav ul {
   padding: 0;
 }
 
-nav ul li {
+.top-nav nav ul li {
   display: inline;
   margin: 0 1rem;
   border-bottom: 3px solid var(--pink);
 }
 
-nav ul li a {
+.top-nav nav ul li a {
   text-decoration: none;
   color: var(--black);
 }
