@@ -280,9 +280,7 @@ h3 {
   color: var(--bg-color);
   text-align: center;
   font-size: 16px;
-  padding: 16px;
-  width: 100px;
-  transition: all 0.5s;
+  padding: 16px;  transition: all 0.5s;
   cursor: pointer;
   margin: 36px;
   display: inline-block;
