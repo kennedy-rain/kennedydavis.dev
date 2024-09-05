@@ -1,146 +1,173 @@
 :root {
-    --white: #fafafa;
-    --black: #302C34;
-    --dk-purple: #640D66;
-    --pink: #EA79A2;
-    --lt-pink: #ffe6f7;
-    --blue: #3e08c6;
-  }
+    --bg-color: #fafafa;
+    --fg-color: #302C34;
+    --secondary-fg-color: #640D66;
+    --secondary-bg-color: #EA79A2;
+    --secondary-accent-color: #ffe6f7;
+    --accent-color: #3e08c6;
+}
 
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
-
-  html,
-  body {
-      background-color: var(--white);
-
-  }
-
-  .top-nav {
-    text-align: center;
-    padding: 10px;
-  }
-
-  .top-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-    border-bottom: 3px solid var(--pink);
-  }
-
-  .top-nav ul li a {
-    text-decoration: none;
-    color: var(--black);
-  }
-
-
-  img {
-      max-width: 100%;
-      height: auto;
-      vertical-align: middle;
-      display: inline-block;
-  }
-
-  /* Main CSS */
-  .grid-wrapper > div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-
-  .grid-wrapper > div > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 0px;
-  }
-
-  .grid-wrapper {
-      display: grid;
-      grid-gap: 0px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      grid-auto-rows: 200px;
-      grid-auto-flow: dense;
-      margin: 50px;
-  }
-
-  .grid-wrapper .wide {
-      grid-column: span 2;
-  }
-
-  .grid-wrapper .tall {
-      grid-row: span 2;
-  }
-
-  .grid-wrapper .big {
-      grid-column: span 2;
-      grid-row: span 2;
-  }
-
-  body {
-      font-family: 'Manrope', sans-serif;
-      color: var(--black);
-      line-height: 1.6;
-  }
-
-  p {
-      margin-bottom: 1.5rem;
-      color: var(--black);
-  }
-
-  .full-width-img {
-    width: 100vw;
+* {
     margin: 0;
     padding: 0;
-  }
+    box-sizing: border-box;
+}
 
-  .project-introduction, .process-section, .final-section {
-      max-width: 800px;
-      margin: 2rem auto;
-      background-color: var(--white);
-  }
+html,
+body {
+    background-color: var(--bg-color);
+}
 
-  .project-introduction h2 {
-      color: var(--dk-purple);
-      text-align: left;
-  }
+.top-nav {
+    text-align: center;
+    padding: 10px;
+}
 
-  .process-section h2, .final-section h2 {
-      color: var(--blue);
-  }
+.top-nav ul li {
+    display: inline;
+    margin: 0 1rem;
+    border-bottom: 3px solid var(--secondary-bg-color);
+}
 
-  a {
-      color: var(--blue);
-      text-decoration: none;
-  }
+.top-nav ul li a {
+    text-decoration: none;
+    color: var(--fg-color);
+}
 
-  a:hover {
-      text-decoration: underline;
-  }
-  img:active {
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Main CSS */
+.grid-wrapper > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-wrapper > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    margin: 50px;
+}
+
+.grid-wrapper .wide {
+    grid-column: span 2;
+}
+
+.grid-wrapper .tall {
+    grid-row: span 2;
+}
+
+.grid-wrapper .big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    color: var(--fg-color);
+    line-height: 1.6;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: var(--fg-color);
+}
+
+.full-width-img {
+    width: 100vw;
+    padding: 0;
+}
+
+.project-introduction, .process-section, .final-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: var(--bg-color);
+}
+
+.project-introduction h2 {
+    color: var(--secondary-fg-color);
+    text-align: left;
+}
+
+.process-section h2, .final-section h2 {
+    color: var(--accent-color);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img:active {
     transform: scale(2);
 }
 
-    img::before {
-        content: '&#x1F50D';
-        position: absolute;
+.process-section::before {
+    content: '';
+    position: absolute;
+    z-index: 100;
+    color: black;
+}
 
-    }
+.process-section {
+    display: grid;
+}
 
-  .preview-section p, .process-section p, .final-section p {
-      font-size: 1rem;
-  }
+.preview-section p, .process-section p, .final-section p {
+    font-size: 1rem;
+}
 
-  .process-section img {
+.process-section img {
     width: 200px;
-  }
+}
 
-  .process-section h2, .final-section h2, .project-introduction h2 {
-      letter-spacing: 1px;
-      color: var(--dk-purple);
-      text-transform: uppercase;
-      text-align: left;
-      padding: 10px 0;
-  }
+.process-section h2, .final-section h2, .project-introduction h2 {
+    letter-spacing: 1px;
+    color: var(--secondary-fg-color);
+    text-transform: uppercase;
+    text-align: left;
+    padding: 10px 0;
+    font-weight: 200;
+}
+
+/** testing zoom image stuff **/
+input#zoomCheckbox {
+    display: none;
+}
+
+.appendedContainer {
+    overflow-x: scroll;
+}
+
+.appendedContainer img {
+    width: 100%;
+    transition: width 0.8s ease;
+    cursor: zoom-in;
+    overflow-x: scroll;
+    max-width: 90%!important;
+}
+
+input#zoomCheckbox:checked ~ label > img {
+    max-width: 300%!important;
+    width: 170%;
+    cursor: zoom-out;
+}

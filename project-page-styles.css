@@ -1,20 +1,58 @@
 /* Projects Page */
 :root {
-    --surface-color: #f4f4f4;
-    --curve: 40;
+    --bg-color: #fafafa;
+    --fg-color: #302C34;
+    --secondary-fg-color: #640D66;
+    --secondary-bg-color: #EA79A2;
+    --secondary-accent-color: #ffe6f7;
+    --accent-color: #3e08c6;
 }
 
 body {
     font-family: "Manrope", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #640D66;
-    color:#302C34;
+    background-color: var(--secondary-accent-color);
+    color: var(--fg-color);
 }
 
 h1 {
-    color: #fff;
+    color: var(--fg-color);
+    margin: auto;
 }
+
+.top-nav {
+    padding: 0 20px;
+  }
+
+  .top-nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Align items horizontally */
+    justify-content: space-around; /* Evenly space the links */
+  }
+
+  .top-nav li {
+    margin: 0;
+    padding: 15px 0; /* Vertical padding */
+  }
+
+  .top-nav a {
+    font-family: "Manrope", sans-serif;;
+    text-decoration: none; /* Remove underline */
+    color: var(--fg-color); /* White text */
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 20px; /* Rounded corners on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+
+  .top-nav a:hover {
+    background-color: var(--secondary-fg-color); /* Darker background on hover */
+    border-radius: 20px; /* Rounded corners on hover */
+    color: var(--bg-color);
+  }
 
 .cards {
     display: grid;
@@ -29,10 +67,10 @@ h1 {
     position: relative;
     display: block;
     height: 100%;
-    border-radius: calc(var(--curve) * 1px);
+    border-radius: 40px; /* Hardcoded since --radius-card is excluded */
     overflow: hidden;
     text-decoration: none;
-    background: linear-gradient(135deg, #EA79A2, #3498db);
+    background: linear-gradient(135deg, var(--secondary-bg-color), var(--accent-color));
 }
 
 .card__image {
@@ -47,8 +85,8 @@ h1 {
     left: 0;
     right: 0;
     z-index: 1;
-    border-radius: calc(var(--curve) * 1px);
-    background-color: var(--surface-color);
+    border-radius: 40px; /* Hardcoded since --radius-card is excluded */
+    background-color: var(--bg-color);
     transform: translateY(100%);
     transition: .2s ease-in-out;
 }
@@ -63,8 +101,8 @@ h1 {
     align-items: center;
     gap: 2em;
     padding: 2em;
-    border-radius: calc(var(--curve) * 1px) 0 0 0;
-    background-color: var(--surface-color);
+    border-radius: 40px 0 0 0; /* Hardcoded since --radius-card is excluded */
+    background-color: var(--bg-color);
     transform: translateY(-100%);
     transition: .2s ease-in-out;
 }
@@ -79,7 +117,7 @@ h1 {
 }
 
 .card__arc path {
-    fill: var(--surface-color);
+    fill: var(--bg-color);
     d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
 }
 
@@ -90,19 +128,19 @@ h1 {
 .card__title {
     font-size: 1em;
     margin: 0 0 .3em;
-    color: #640D66;
+    color: var(--secondary-fg-color);
 }
 
 .card__tagline {
     display: block;
     margin: 1em 0;
     font-size: .8em;
-    color: #640D66;
+    color: var(--secondary-fg-color);
 }
 
 .card__short-description {
     font-size: .8em;
-    color: #640D66;
+    color: var(--secondary-fg-color);
     padding-bottom: 20px;
 }
 
@@ -111,12 +149,12 @@ h1 {
     border-radius: 20px;
     font-size: 10px;
     padding: 5px;
-	margin: 15px 0;
+    margin: 15px 0;
     color: #c84c79;
     background-color: #fff9fd;
     font-weight: 600;
-	max-width: -moz-fit-content;
-	max-width: fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
 }
 
 .card__tag-class {
@@ -124,18 +162,18 @@ h1 {
     border-radius: 20px;
     font-size: 10px;
     padding: 5px;
-	margin: 15px 0;
+    margin: 15px 0;
     color: #4453E0;
     background-color: #f4f6ff;
     font-weight: 600;
-	max-width: -moz-fit-content;
-	max-width: fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
 }
 
 .card__description {
     padding: 0 2em 2em;
     margin: 0;
-    color: #640D66;
+    color: var(--secondary-fg-color);
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
