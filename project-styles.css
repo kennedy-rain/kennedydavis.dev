@@ -18,21 +18,7 @@ body {
     background-color: var(--bg-color);
 }
 
-.top-nav {
-    text-align: center;
-    padding: 10px;
-}
 
-.top-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-    border-bottom: 3px solid var(--secondary-bg-color);
-}
-
-.top-nav ul li a {
-    text-decoration: none;
-    color: var(--fg-color);
-}
 
 img {
     max-width: 100%;
@@ -59,18 +45,16 @@ p {
 }
 
 .project-introduction, .process-section, .final-section {
-    max-width: 800px;
-    margin: 2rem auto;
     background-color: var(--bg-color);
 }
 
 .project-introduction h2 {
-    color: var(--secondary-fg-color);
+    color: #302C34;
     text-align: left;
 }
 
 .process-section h2, .final-section h2 {
-    color: var(--accent-color);
+    color: #302C34;
 }
 
 a {
@@ -85,9 +69,6 @@ a:hover {
     color: var(--secondary-bg-color);
 }
 
-img:active {
-    transform: scale(2);
-}
 
 .process-section::before {
     content: '';
@@ -110,16 +91,15 @@ img:active {
 
 .process-section h2, .final-section h2, .project-introduction h2 {
     letter-spacing: 1px;
-    color: var(--secondary-fg-color);
+    color: #302C34;
     text-transform: uppercase;
     text-align: left;
     padding: 10px 0;
     font-weight: 200;
 }
 
-.img-gallery {
-    display: flex;
-    gap: 10px;
+.project-page {
+    row-gap: 100px;
 }
 
 /* styles.css */
@@ -129,7 +109,9 @@ img:active {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    margin-left: 10vw;
 }
+
 
 .clickable-image {
     max-width: 200px;
@@ -169,8 +151,11 @@ img:active {
     color: #fff;
     cursor: pointer;
     transition: ease-in 200ms;
+    transform: scale(2);
 }
 
 .close:hover {
     color: var(--secondary-bg-color);
 }
+
+

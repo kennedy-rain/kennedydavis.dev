@@ -449,6 +449,27 @@ footer {
   font-size: 14px;
 }
 
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-social {
+    flex: 1 1 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+
 /* Cool Waves for Homepage */
 *,
 *:after,

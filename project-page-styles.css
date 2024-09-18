@@ -12,7 +12,7 @@ body {
     font-family: "Manrope", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--secondary-accent-color);
+    background-color: var(--secondary-fg-color);
     color: var(--fg-color);
 }
 
