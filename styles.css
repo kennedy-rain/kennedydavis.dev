@@ -78,7 +78,7 @@ h1, h2, p, button {
   width: 40vw;
   height: auto;
   grid-column: 2 / 3;
-  margin: -150px 0px;
+  margin: -300px 0px;
 }
 
 .purple-button {
@@ -90,7 +90,7 @@ h1, h2, p, button {
   align-items: center;
   box-sizing: border-box;
   display: flex;
-  font-family: Inter, sans-serif;
+
   font-size: 16px;
   height: 48px;
   justify-content: center;
@@ -103,6 +103,7 @@ h1, h2, p, button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  margin: 50px 0;
 }
 
 .purple-button:after {
@@ -209,7 +210,7 @@ h3 {
   transition: transform 0.3s, box-shadow 0.3s;
   max-width: 300px;
   min-width: 250px;
-  height: 400px;
+  height: 420px;
   flex: 1 1 calc(33.333% - 40px);
   margin: 10px;
   background-color: var(--bg-color);
@@ -258,8 +259,8 @@ h3 {
   padding: 10px;
   border: none;
   border-radius: 20px;
-  max-width: 100px;
-  max-height: 20px;
+  max-width: 120px;
+  max-height: 30px;
   margin: 0 auto;
   z-index: 1;
 }
@@ -284,7 +285,7 @@ h3 {
   border: none;
   color: var(--bg-color);
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
   padding: 16px;  transition: all 0.5s;
   cursor: pointer;
   margin: 36px;
@@ -297,14 +298,14 @@ h3 {
   content: '➜';
   position: absolute;
   opacity: 0;
-  top: 14px;
-  right: -20px;
+  top: 12px;
+  right: -25px;
   transition: 0.5s;
 }
 
 .project:hover .learn-more {
-  padding-right: 24px;
-  padding-left: 8px;
+  padding-right: 30px;
+  padding-left: 10px;
 }
 
 .project:hover .learn-more:after {
@@ -737,13 +738,40 @@ svg path:nth-child(4) {
   color: #302C34;
   text-transform: uppercase;
   text-align: left;
-  padding: 10px 0;
+  padding-top: 10px 0;
   font-weight: 200;
   grid-column: 1;
+  margin-bottom: 0;
 }
 
 .project-page {
   row-gap: 100px;
+}
+
+body.project-page {
+  background: linear-gradient(-45deg, #fff, #fafafa, #fff5fb, #f4faff);
+  background-size: 400% 400%;
+  animation: BackgroundGradient 20s ease infinite;
+}
+
+.project-page h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-family: Open Sans, sans-serif;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2em;
+  padding: 5px;
+}
+
+@keyframes BackgroundGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 /* styles.css */
