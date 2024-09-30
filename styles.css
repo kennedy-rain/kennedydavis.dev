@@ -383,101 +383,6 @@ h3 {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* About Me Page */
-header {
-  text-align: center;
-  padding: 20px 0;
-}
-
-#about-me-image {
-  max-width: 500px;
-  height: auto;
-}
-
-.about-me-container {
-  background-color: #fff;
-}
-
-.bio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.bio-content {
-  max-width: 600px;
-  margin-top: 20px;
-}
-
-.skills {
-  margin: 40px auto;
-  width: 100px;
-}
-
-.skills h2 {
-  margin: 0;
-  width: 200px;
-  text-align: center;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.skill-item {
-  background: var(--secondary-accent-color);
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.skill-title {
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.skill-level {
-  font-size: 0.9em;
-  color: #666;
-}
-
-.contact {
-  background-color: #e3f2fd;
-  padding: 40px 20px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 600px;
-}
-
-.contact h2 {
-  color: #0d47a1;
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.contact-info p {
-  font-size: 18px;
-  margin: 10px 0;
-  color: #333;
-}
-
-.contact-info a {
-  color: #0d47a1;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.contact-info a:hover {
-  color: var(--secondary-fg-color);
-}
-
 
 
 
@@ -850,7 +755,31 @@ body.project-page {
 }
 
 /** about me **/
+.about-text {
+  line-height: 20px;
+  text-align: center;
+}
 
+.subtitle {
+  font-weight: 200;
+  color: var(--secondary-fg-color);
+}
+
+.contact {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.contact a {
+  font-weight: 600;
+  color: var(--secondary-fg-color);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: var(--secondary-bg-color);
+  transition: ease 500ms;
+}
 
 /** mobile styles **/
 
