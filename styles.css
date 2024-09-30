@@ -180,10 +180,42 @@ h1, h2, p, button {
 }
 
 header img {
-  width: 60px;
+  width: 50px;
   float: left;
-  margin: 5px;
   margin-left: 100px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+header img:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s ease-in-out;
+}
+
+header img:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+header img:hover {
+  animation: bounce 0.6s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
 }
 
 h3 {
@@ -742,7 +774,8 @@ svg path:nth-child(4) {
 }
 
 .process-section img {
-  max-width: 300px;
+  max-width: 500px;
+  max-height: 400px;
   height: fit-content;
   flex-shrink: 0;
 }
@@ -777,9 +810,9 @@ svg path:nth-child(4) {
 }
 
 body.project-page {
-  background: linear-gradient(-45deg, #fff, #fafafa, #acdcff, #ffffff);
+  background: linear-gradient(-150deg, #acdcff, #fafafa, #fff6fc, #ffffff);
   background-size: 400% 400%;
-  animation: 3s ease-in 1s infinite reverse both running slidein;
+  animation: BackgroundGradient 10s ease infinite;
 }
 
 .project-page h1 {
@@ -815,7 +848,7 @@ body.project-page {
 
 
 .clickable-image {
-  max-width: 200px;
+  max-width: 400px;
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -859,4 +892,4 @@ body.project-page {
   color: var(--secondary-bg-color);
 }
 
-
+/** about me **/
