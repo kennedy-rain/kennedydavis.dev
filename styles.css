@@ -135,12 +135,6 @@ h1, h2, p, button {
   outline: 0;
 }
 
-@media (min-width: 768px) {
-  .purple-button {
-    padding: 0 40px;
-  }
-}
-
 
 /* Styling the nav bar */
 .top-nav {
@@ -496,23 +490,6 @@ footer {
   font-size: 14px;
 }
 
-
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-
-  header img {
-    width: 0;
-  }
-  header img:before {
-    display: none;
-  }
-
-}
-
-
 /* Cool Waves for Homepage */
 *,
 *:after,
@@ -565,19 +542,6 @@ svg path:nth-child(4) {
       "M0, 192 C220, 100, 440, 100, 660, 192 C880, 290, 1100, 290, 1320, 192 L1320 500 L0 500"
     );
   }
-}
-
-/** Responsive Styles **/
-@media screen and (max-width: 750px) {
-      .intro p {
-        min-width: 80vw;
-      }
-
-      #computer-lottie-animation {
-        grid-column: 1/3;
-        width: 100vw;
-        padding:250px 0;
-      }
 }
 
 .project-gallery h1 {
@@ -776,7 +740,7 @@ svg path:nth-child(4) {
   color: #302C34;
   text-transform: uppercase;
   text-align: left;
-  padding-top: 10px 0;
+  padding-top: 50px;
   font-weight: 200;
   grid-column: 1;
   margin-bottom: 0;
@@ -789,12 +753,14 @@ svg path:nth-child(4) {
   font-weight: 600;
   font-style: italic;
   color:var(--secondary-fg-color);
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
+/*
 .process-section h3:not(:nth-of-type(1)) {
   padding-top: 50px;
 }
+  */
 
 .project-page {
   row-gap: 100px;
@@ -884,3 +850,35 @@ body.project-page {
 }
 
 /** about me **/
+
+
+/** mobile styles **/
+
+/** Responsive Styles **/
+@media screen and (max-width: 750px) {
+  .intro p {
+    min-width: 80vw;
+  }
+
+  #computer-lottie-animation {
+    grid-column: 1/3;
+    width: 100vw;
+    padding:250px 0;
+  }
+
+  .purple-button {
+    padding: 0 40px;
+  }
+
+  header img {
+    width: 0;
+  }
+  header img:before {
+    display: none;
+  }
+
+  .project-gallery {
+    padding-bottom: 20px;
+  }
+
+}
