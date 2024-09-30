@@ -179,6 +179,12 @@ h1, h2, p, button {
   color: var(--secondary-fg-color);
 }
 
+header img {
+  width: 60px;
+  float: left;
+  margin: 5px;
+  margin-left: 100px;
+}
 
 h3 {
   color: var(--bg-color);
@@ -476,6 +482,11 @@ footer {
     text-align: center;
     margin: 10px 0;
   }
+
+  header img {
+    width: 0;
+  }
+
 }
 
 
@@ -653,7 +664,7 @@ svg path:nth-child(4) {
   padding-bottom: 20px;
 }
 
-.card__tag-client {
+.card__tag {
   border: 2px #ff82b0 solid;
   border-radius: 20px;
   font-size: 10px;
@@ -691,7 +702,7 @@ svg path:nth-child(4) {
 }
 
 .full-width-img {
-  width: 100vw;
+  max-width: 100%;
   padding: 0;
 }
 
@@ -730,7 +741,9 @@ svg path:nth-child(4) {
 }
 
 .process-section img {
-  width: 200px;
+  max-width: 300px;
+  height: fit-content;
+  flex-shrink: 0;
 }
 
 .process-section h2, .final-section h2, .project-introduction h2 {
@@ -744,14 +757,28 @@ svg path:nth-child(4) {
   margin-bottom: 0;
 }
 
+.process-section h3 {
+  all: unset;
+  grid-column: 1;
+  margin-left: 10vw;
+  font-weight: 600;
+  font-style: italic;
+  color:var(--secondary-fg-color);
+  padding-top: 20px;
+}
+
+.process-section h3:not(:nth-of-type(1)) {
+  padding-top: 50px;
+}
+
 .project-page {
   row-gap: 100px;
 }
 
 body.project-page {
-  background: linear-gradient(-45deg, #fff, #fafafa, #fff5fb, #f4faff);
+  background: linear-gradient(-45deg, #fff, #fafafa, #acdcff, #ffffff);
   background-size: 400% 400%;
-  animation: BackgroundGradient 20s ease infinite;
+  animation: 3s ease-in 1s infinite reverse both running slidein;
 }
 
 .project-page h1 {
