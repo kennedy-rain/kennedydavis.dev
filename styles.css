@@ -24,6 +24,7 @@ body {
   background-color: var(--bg-color);
   color: var(--fg-color);
   opacity: 1;
+  padding-bottom: 200px;
 }
 
 header {
@@ -780,6 +781,7 @@ body.project-page {
   color: var(--secondary-bg-color);
   transition: ease 500ms;
 }
+
 
 /** mobile styles **/
 
