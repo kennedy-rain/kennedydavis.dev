@@ -231,6 +231,7 @@ h3 {
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: var(--secondary-fg-color);
+  margin-bottom: -300px;
   padding-bottom: 500px;
 }
 
