@@ -636,7 +636,7 @@ svg path:nth-child(4) {
 }
 
 .process-section img {
-  max-width: 500px;
+  max-width: 80vw;
   max-height: 400px;
   height: fit-content;
   flex-shrink: 0;
