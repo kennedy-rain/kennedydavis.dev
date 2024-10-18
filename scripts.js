@@ -1,5 +1,24 @@
-// script.js
+// loading
+function load(url) {
+    // display loading image here...
+    document.getElementById('loadingImg').visible = true;
+    // request your data...
+    var req = new XMLHttpRequest();
+    req.open("POST", url, true);
 
+    req.onreadystatechange = function () {
+        if (req.readyState == 4 && req.status == 200) {
+            // content is loaded...hide the gif and display the content...
+            if (req.responseText) {
+                document.getElementById('content').innerHTML = req.responseText;
+                document.getElementById('loadingImg').visible = false;
+            }
+        }
+    };
+    request.send(vars);
+}
+
+// make images clickable and magnify
 // Get the modal and elements for the full image view
 const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("fullImage");
